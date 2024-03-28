@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="imgs/movie-symbol-of-video-camera_icon-icons.com_72981.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Escolher Filme</title>
+    <style>
+      * {
+        font-family: Poppins, sans-serif;
+        list-style: none;
+        color: white;
+      }
+      body {
+        background-color: rgb(37, 37, 37);
+        padding: 20px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .main h1 {
+        text-align: center;
+      }
+      .main p {
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      #escolha {
+        margin-top: 20px;
+        text-align: center;
+        width: 140px;
+        height: 20px;
+        font-size: 16px;
+        padding: 10px 10px;
+        color: black;
+      }
+      #form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+      }
+      .btn-default {
+        cursor: pointer;
+        padding: 10px 15px;
+        background-color: rgb(76, 0, 255);
+        border: none;
+        font-weight: bold;
+        color: white;
+        border-radius: 12px;
+      }
+
+      .erro {
+        color: 0;
+      }
+
+      #carros1,
+      #carros2,
+      #carros3 {
+        border-radius: 12px;
+        padding: 20px;
+        background-color: white;
+        display: none;
+        width: 400px;
+        height: 6%;
+      }
+      #carros1 img,
+      #carros2 img,
+      #carros3 img {
+        border-radius: 12px;
+        box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        height: 100%;
+      }
+      #texto {
+        color: black;
+      }
+
+      #carros1.active,
+      #carros2.active,
+      #carros3.active {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #carros1 a,
+      #carros2 a,
+      #carros3 a {
+        padding: 20px 0px;
+        text-align: center;
+        text-decoration: none;
+        margin: 20px 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>ESCOLHA UM FILME DA SAGA CARROS PARA ASSISTIR</h1>
+      <p>
+        1 - Carros 1 <br />
+        2 - Carros 2 <br />3 - Carros 3
+      </p>
+      <form id="form" onsubmit="return escolhaFilme()">
+        <input type="number" id="escolha" placeholder="Selecione o Filme" />
+        <button type="submit" class="btn-default">SELECIONAR</button>
+      </form>
+
+      <p id="escolhido"></p>
+      <div id="carros1">
+        <img src="imgs/carros.png" alt="" />
+        <p id="texto">
+         Ao viajar para a Califórnia, o famoso carro de corridas Relâmpago McQueen se perde e vai parar em Radiator Springs, uma cidadezinha na Rota 66. Ele conhece novos amigos e aprende lições que mudam sua forma de encarar a vida.
+        </p>
+        <a
+          target="_blank"
+          href="https://www.disneyplus.com/pt-br/movies/carros/41KYquQjLwge"
+          class="btn-default"
+          >SAIBA MAIS</a
+        >
+      </div>
+      <div id="carros2">
+        <img src="imgs/carros2.png" alt="" />
+        <p id="texto">
+            O astro das corridas, Relâmpago McQueen, e o carro-guincho, Mate, viajam para disputar o primeiro Grand Prix Mundial, que irá revelar o carro mais veloz do planeta. Nessa jornada imperdível, Mate se envolve com um grupo de espionagem e vive grandes aventuras com seus amigos.
+        </p>
+        <a
+          target="_blank"
+          href="https://www.disneyplus.com/pt-br/movies/carros-2/1Evb1neuySt0"
+          class="btn-default"
+          >SAIBA MAIS</a
+        >
+      </div>
+      <div id="carros3">
+        <img src="imgs/carros3.png" alt="" />
+        <p id="texto">
+          Durante mais uma disputa eletrizante nas pistas, o campeão Relâmpago
+          McQueen acelerou demais e acabou perdendo o controle. Agora, após ter
+          capotando várias vezes e quase ter partido dessa para melhor, o
+          vermelinho vai ter sua vida alterada para sempre. O acidente foi tão
+          grave que, com os estragos, McQueen pode ter que se aposentar de vez.
+        </p>
+        <a
+          target="_blank"
+          href="https://www.disneyplus.com/pt-br/movies/carros-3/2uwOWguXyJe4"
+          class="btn-default"
+          >SAIBA MAIS</a
+        >
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
